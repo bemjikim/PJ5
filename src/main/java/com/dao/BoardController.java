@@ -90,12 +90,7 @@ public class BoardController {
         }
         return "redirect:/board/list";
     }
-    @RequestMapping(value = "/board/logout")
-    public String logout(HttpSession session)
-    {
-        session.invalidate();
-        return "redirect:/login/login";
-    }
+
 
 
 }

@@ -37,7 +37,7 @@
 </head>
 <body>
 <h1 style="text-align: center">Cart Rider</h1>
-<h3>관리자님 어서오세요 <a href = "logout">logout</a></h3>
+<h3>관리자님 어서오세요 <a href = "../login/logout">logout</a></h3>
 <table id="list" width="90%">
 
 <tr>
