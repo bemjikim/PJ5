@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Insert title here</title>
+    <title>Cart Rider Login Page</title>
     <style>
         img,label { display:inline-block;}
         label{ width:130px}
@@ -24,6 +24,7 @@
     </div>
     <button type='submit'>login</button>
 </form>
+    <p>혹시 처음 오셨나요? <a href = "signup">회원가입</a></p>
 </div>
 </body>
 </html>

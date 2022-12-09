@@ -33,11 +33,16 @@
 		var a = confirm("정말로 삭제하겠습니까?");
 		if(a) location.href='deleteok/' + id;
 	}
+
+	function logout_ok(){
+		var a = confirm("로그아웃 하시겠습니까?");
+		if(a) location.href='../login/logout'
+	}
 </script>
 </head>
 <body>
 <h1 style="text-align: center">Cart Rider</h1>
-<h3>관리자님 어서오세요 <a href = "../login/logout">logout</a></h3>
+<h3>관리자님 어서오세요 <a href = "javascript:logout_ok()">logout</a></h3>
 <table id="list" width="90%">
 
 <tr>

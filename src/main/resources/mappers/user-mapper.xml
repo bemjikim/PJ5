@@ -3,8 +3,17 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="User">
+    <insert id = "insertMember">
+        insert into MEMBER(userid, password)
+        values(#{userid}, #{password})
+    </insert>
     <select id ="getUser" resultType="com.vo.UserVO">
         select userid, username from MEMBER
         WHERE userid = #{userid} AND password = #{password}
+    </select>
+
+    <select id = "checkUser" resultType ="com.vo.UserVO">
+        select userid, username from MEMBER
+        WHERE userid = #{userid}
     </select>
 </mapper>
