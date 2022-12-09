@@ -25,7 +25,7 @@ public class BoardController {
         DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
         String formattedDate = dateFormat.format(date);
         model.addAttribute("serverTime", formattedDate);
-        return "index";
+        return "redirect:/login";
     }
 
     @RequestMapping(value = "/board/list", method = RequestMethod.GET)
