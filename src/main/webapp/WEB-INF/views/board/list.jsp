@@ -1,7 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@page import="com.crud.dao.BoardDAO, com.crud.bean.BoardVO,java.util.*"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" pageEncoding="UTF-8" %>
+<%@page import="com.dao.BoardDAO, com.vo.BoardVO"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,39 +31,42 @@
 <script>
 	function delete_ok(id){
 		var a = confirm("정말로 삭제하겠습니까?");
-		if(a) location.href='deletepost.jsp?id=' + id;
+		if(a) location.href='deleteok/' + id;
 	}
 </script>
 </head>
 <body>
-<h1>자유게시판</h1>
-<%
-	BoardDAO boardDAO = new BoardDAO();
-	List<BoardVO> list = boardDAO.getBoardList();
-	request.setAttribute("list",list);
-%>
+<h1 style="text-align: center">Cart Rider</h1>
+<h3>관리자님 어서오세요 <a href = "logout">logout</a></h3>
 <table id="list" width="90%">
+
 <tr>
-	<th>Id</th>
-	<th>Title</th>
-	<th>Writer</th>
-	<th>Content</th>
-	<th>Regdate</th>
+	<th>식별 번호</th>
+	<th>판매자</th>
+	<th>상품명</th>
+	<th>작성 시간</th>
+	<th>가격</th>
+	<th>거래가능장소</th>
+	<th>연락처</th>
+	<th>상품링크</th>
 	<th>Edit</th>
 	<th>Delete</th>
 </tr>
-<c:forEach items="${list}" var="u">
+<c:forEach items="${list}" var="u" varStatus="status">
 	<tr>
-		<td>${u.getSeq()}</td>
-		<td>${u.getTitle()}</td>
-		<td>${u.getWriter()}</td>
-		<td>${u.getContent()}</td>
-		<td>${u.getRegdate()}</td>
-		<td><a href="board/editform.jsp?id=${u.getSeq()}">Edit</a></td>
-		<td><a href="javascript:delete_ok('${u.getSeq()}')">Delete</a></td>
+		<td>${u.seq}</td>
+		<td>${u.seller}</td>
+		<td>${u.named}</td>
+		<td>${u.regdate}</td>
+		<td>${u.cost}</td>
+		<td>${u.location}</td>
+		<td>${u.contact}</td>
+		<td><button type="button" style="background-color: #FF0000; color: white; border: none"><a href="http://${u.getLink()}" target="_blank" style="text-decoration: none; color: white" >상품보러가기</a></button></td>
+		<td><a href="editform/${u.seq}">Edit</a></td>
+		<td><a href="javascript:delete_ok('${u.seq}')">Delete</a></td>
 	</tr>
 </c:forEach>
 </table>
-<br/><a href="board/addpostform.jsp">Add New Post</a>
+<br/><a href="add">Add New Post</a>
 </body>
 </html>

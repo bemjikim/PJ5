@@ -8,14 +8,20 @@
 </head>
 <body>
 
-<h1>Add New Post</h1>
-<form action="addpost.jsp" method="post">
-<table>
-<tr><td>Title:</td><td><input type="text" name="title"/></td></tr>
-<tr><td>Writer:</td><td><input type="text" name="writer"/></td></tr>
-<tr><td>Content:</td><td><textarea cols="50" rows="5" name="content"></textarea></td></tr>
-<tr><td><a href="posts.jsp">View All Records</a></td><td align="right"><input type="submit" value="Add Post"/></td></tr>
+<h1>상품 등록하기</h1>
+<form action="addok" method="post">
+<table id ="edit">
+<tr><td>판매자:</td><td><input type="text" name="seller"/></td></tr>
+<tr><td>상품명:</td><td><input type="text" name="named"/></td></tr>
+<tr><td>가격:</td><td><input type="text" name="cost"/></td></tr>
+<tr><td>거래가능장소:</td><td><input type="text" name="location"/></td></tr>
+<tr><td>연락처:</td><td><input type="text" name="contact"/></td></tr>
+<tr><td>상품링크:</td><td><input type="text" name="link"/></td></tr>
 </table>
+<tr/>
+    <button type ="button" onclick ="history.back()">뒤로가기</button>
+    <button type = "submit"> 상품등록 </button>
+
 </form>
 
 </body>

@@ -1,49 +1,87 @@
-package com.crud.bean;
+package com.vo;
 
 import java.util.Date;
 
 public class BoardVO {
 	private int seq;
-	private String title;
-	private String writer;
-	private String content;
+	private String seller;
+	private String named;
+	private String photo;
 	private Date regdate;
-	private int cnt;
-	
+	private String cost;
+	private String location;
+	private String contact;
+	private String link;
+
 	public int getSeq() {
 		return seq;
 	}
+
 	public void setSeq(int seq) {
 		this.seq = seq;
 	}
-	public String getTitle() {
-		return title;
+
+	public String getSeller() {
+		return seller;
 	}
-	public void setTitle(String title) {
-		this.title = title;
+
+	public void setSeller(String seller) {
+		this.seller = seller;
 	}
-	public String getWriter() {
-		return writer;
+
+	public String getNamed() {
+		return named;
 	}
-	public void setWriter(String writer) {
-		this.writer = writer;
+
+	public void setNamed(String named) {
+		this.named = named;
 	}
-	public String getContent() {
-		return content;
+
+	public String getPhoto() {
+		return photo;
 	}
-	public void setContent(String content) {
-		this.content = content;
+
+	public void setPhoto(String photo) {
+		this.photo = photo;
 	}
+
 	public Date getRegdate() {
 		return regdate;
 	}
+
 	public void setRegdate(Date regdate) {
 		this.regdate = regdate;
 	}
-	public int getCnt() {
-		return cnt;
+
+	public String getCost() {
+		return cost;
 	}
-	public void setCnt(int cnt) {
-		this.cnt = cnt;
+
+	public void setCost(String cost) {
+		this.cost = cost;
+	}
+
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
+	public String getContact() {
+		return contact;
+	}
+
+	public void setContact(String contact) {
+		this.contact = contact;
+	}
+
+	public String getLink() {
+		return link;
+	}
+
+	public void setLink(String link) {
+		this.link = link;
 	}
 }
